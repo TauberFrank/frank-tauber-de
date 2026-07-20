@@ -1,34 +1,69 @@
 @import "tailwindcss";
 
 @theme {
+  --font-heading: "Inter", sans-serif;
+  --font-body: "JetBrains Mono", monospace;
   --color-brand: #FF4D00;
   --color-brand-dark: #CC3D00;
   --color-surface: #151515;
   --color-surface-light: #1a1a1a;
-  --color-grid-line: #222222;
-  --font-sans: 'Space Grotesk', sans-serif;
+  --font-sans: "JetBrains Mono", monospace;
   --font-mono: 'JetBrains Mono', monospace;
   --font-weight-black: 700;
 }
 
+:root {
+  --color-background: #000000;
+  --color-surface: #151515;
+  --color-brand: #FF4D00;
+  --font-heading: "Inter", sans-serif;
+  --font-body: "JetBrains Mono", monospace;
+}
+
 @layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    font-family: var(--font-sans);
-    background-color: #000000;
+    font-family: var(--font-body);
+    line-height: 1.75;
+    background-color: var(--color-background);
     color: #ffffff;
-    background-image:
-      linear-gradient(var(--color-grid-line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
-    background-size: 40px 40px;
+    margin: 0;
   }
 
   ::selection {
     background-color: var(--color-brand);
     color: #000000;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading) !important;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+
+  p,
+  li,
+  table,
+  .metric-box,
+  .spec-table {
+    font-family: var(--font-body);
+    line-height: 1.65;
   }
 }
 
@@ -43,7 +78,7 @@
 
   .error-card {
     border: 1px solid var(--color-brand);
-    background: linear-gradient(180deg, rgba(255, 77, 0, 0.06) 0%, rgba(0, 0, 0, 0.9) 100%);
+    background-color: var(--color-surface);
   }
 
   .module-card {
@@ -54,7 +89,6 @@
 
   .module-card:hover {
     border-color: var(--color-brand);
-    box-shadow: 0 0 30px rgba(255, 77, 0, 0.1);
   }
 
   .metric-box {
