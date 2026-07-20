@@ -8,6 +8,7 @@
   --color-grid-line: #222222;
   --font-sans: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+  --font-weight-black: 700;
 }
 
 @layer base {
