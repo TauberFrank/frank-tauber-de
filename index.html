@@ -9,6 +9,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="dist/output.css">
+  <style>
+    p:not(.font-mono):not(.font-bold):not(.font-semibold):not(.font-black) {
+      font-weight: 500;
+    }
+  </style>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><rect width='10' height='10' fill='%23FF4D00'/></svg>">
 </head>
 <body class="antialiased">
@@ -30,7 +35,7 @@
       <p class="font-mono text-sm md:text-base text-gray-500 mb-12">
         Spezialist für den SHK-Mittelstand.
       </p>
-      <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl">
+      <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl font-medium">
         Ich baue Ihnen die Maschine. Datengetrieben. Operativ. Sofort wirksam.
       </p>
       <a href="#kontakt" class="cta-button inline-block px-8 py-4 text-base md:text-lg">
