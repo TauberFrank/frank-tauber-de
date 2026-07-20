@@ -1,0 +1,14 @@
+{
+  "name": "frank-tauber-de",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i src/input.css -o dist/output.css --minify",
+    "dev:css": "npx @tailwindcss/cli -i src/input.css -o dist/output.css --watch",
+    "convert-img": "node convert-images.js"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.2.1"
+  }
+}
